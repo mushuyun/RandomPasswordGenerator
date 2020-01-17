@@ -67,7 +67,7 @@ if (complexity != null && inputS === true ){
         }
 }
 
-if(complexity != null && inputL === true && inputU === true){
+if(complexity != null && inputL === true && inputU === true && inputN === false && inputS === false){
 
     let values = lower.concat(upper);
     
@@ -100,7 +100,7 @@ if(complexity != null && inputL === true && inputU === true && inputN === true){
             }  
     }   
 
-if(complexity != null && inputL === true && inputN === true){
+if(complexity != null && inputL === true && inputN === true && inputU === false && inputS === false){
         
     let values = lower.concat(number);
         
@@ -116,7 +116,7 @@ if(complexity != null && inputL === true && inputN === true){
             }  
     }      
         
-if(complexity != null && inputU === true && inputN === true){
+if(complexity != null && inputU === true && inputN === true && inputL === false && inputS === false){
         let values = upper.concat(number);
         
         function generate(){ 
@@ -131,6 +131,34 @@ if(complexity != null && inputU === true && inputN === true){
             }  
     }  
 
+if(complexity != null && inputL === true &&  inputU === true && inputS === true){
+        let values = lower.concat(upper, symbol);
+        
+        function generate(){ 
+            let password = "";
+            for(var i = 0; i < complexity; i++){
+             password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+                }
+                
+            document.getElementById("display").value = password;
+                
+            document.getElementById("lastNums").innerHTML += password + "<br />";         
+            }  
+    }     
+if(complexity != null && inputL === true && inputN === true && inputS === true){
+        let values = lower.concat(number, symbol);
+        
+        function generate(){ 
+            let password = "";
+            for(var i = 0; i < complexity; i++){
+             password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+                }
+                
+            document.getElementById("display").value = password;
+                
+            document.getElementById("lastNums").innerHTML += password + "<br />";         
+            }  
+    }    
 if(complexity != null && inputU === true && inputN === true && inputS === true){
         let values = upper.concat(number, symbol);
         
@@ -146,7 +174,7 @@ if(complexity != null && inputU === true && inputN === true && inputS === true){
             }  
     }     
 
-if(complexity != null && inputU === true && inputS === true){
+if(complexity != null && inputU === true && inputS === true && inputL === false && inputN === false){
         let values = upper.concat(symbol);
         
         function generate(){ 
@@ -161,7 +189,7 @@ if(complexity != null && inputU === true && inputS === true){
             }  
     }  
     
-if(complexity != null && inputN === true && inputS === true){
+if(complexity != null && inputN === true && inputS === true && inputL === false && inputU ===false){
         let values = number.concat(symbol);
         
         function generate(){ 
@@ -176,7 +204,7 @@ if(complexity != null && inputN === true && inputS === true){
             }  
     }  
 
-if(complexity != null && inputL === true && inputS === true){
+if(complexity != null && inputL === true && inputS === true && inputN === false && inputU === false){
         let values = lower.concat(symbol);
         
         function generate(){ 
