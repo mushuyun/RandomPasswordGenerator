@@ -4,7 +4,8 @@ This project is to randomly generate passowords. I set up the password length be
 
 Here is the link to the webpage: https://mushuyun.github.io/RandomPasswordGenerator/.
 
-Here is a screenshot to show you how it looks. 
+**Here is a screenshot to show you how it looks.**
+
 
 ![](pwgenerator1.png?raw=true "Screen shot")
 
